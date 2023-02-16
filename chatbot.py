@@ -5,6 +5,7 @@ from telegram.ext import Updater, MessageHandler, Filters
 import configparser
 import logging
 
+#main 
 def main():
     # Load your token and create an Updater for your Bot
     config = configparser.ConfigParser()
@@ -29,5 +30,6 @@ def echo(update, context):
     logging.info("context: " + str(context))
     context.bot.send_message(chat_id=update.effective_chat.id, text= reply_message)
 
+#initial main
 if __name__ == '__main__':
     main()
