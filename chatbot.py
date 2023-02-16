@@ -5,7 +5,6 @@ from telegram.ext import Updater, MessageHandler, Filters
 import configparser
 import logging
 
-
 def main():
     # Load your token and create an Updater for your Bot
     config = configparser.ConfigParser()
@@ -23,7 +22,6 @@ def main():
     # To start the bot:
     updater.start_polling()
     updater.idle()
-
 
 def echo(update, context):
     reply_message = update.message.text.upper()
